@@ -1,0 +1,21 @@
+<div ng-controller="viewStudentController">
+<h2> Student Details</h2>
+<form name="form1" class="css-form" > Name:
+        <input type="text" ng-model="student.name" name="studentname" required/> <br/>
+	Age:
+        <input type="text" ng-model="student.age" name="studentage" required/> <br/>
+	ID:
+        <input type="text" ng-model="student.id" name="studentid" required/> <br/>
+	<input type="button" value="Save" ng-click="update(student)" class="btn btn-primary" />
+</form>
+<table>
+    <tr ng-repeat="student in students | orderBy:'age'">
+        <td>{{student.name | uppercase}}</td>
+	<td>{{student.age}}</td>
+	<td>{{student.id}}</td>
+	<td> <a href="javascript:void(0)" ng-click="edit(student.id)">edit</a> | <a href="javascript:void(0)" ng-click="delete(student.id)">delete</a>
+    </tr>
+</table>
+    
+    
+</div>
