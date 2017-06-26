@@ -1,14 +1,14 @@
 <div ng-controller="viewStudentController">
 <h2> Student Details</h2>
 <form name="form1" class="css-form" > Name:
-        <input type="text" ng-model="student.name" name="studentname" required/> <br/>
+        <input type="text" ng-model="student.name" name="studentname" required/> <br/><br/>
 	Age:
-        <input type="text" ng-model="student.age" name="studentage" required/> <br/>
+        <input type="text" ng-model="student.age" name="studentage" required/> <br/><br/>
 	ID:
-        <input type="text" ng-model="student.id" name="studentid" required/> <br/>
+        <input type="text" ng-model="student.id" name="studentid" required ng-readonly="true"/> <br/><br/>
 	<input type="button" value="Save" ng-click="update(student)" class="btn btn-primary" />
 </form>
-<table>
+<table class = "table table-striped table-bordered">
     <tr ng-repeat="student in students | orderBy:'age'">
         <td>{{student.name | uppercase}}</td>
 	<td>{{student.age}}</td>

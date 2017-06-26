@@ -5,18 +5,20 @@
             <div ng-show="form.studentdate.$error.required"> Enter Name</div>
             
         </div><br/>
-        Age:
+        Age  :
         <input type="text" ng-model="student.age" name="studentage" required/> <br/>
         <div ng-show="form.$submitted || form.studentdescription.$touched">
             <div ng-show="form.studentdescription.$error.required"> Enter Age</div>
             
         </div>   
-	ID:
+	<br/>
+	ID       :
         <input type="text" ng-model="student.id" name="studentid" required/> <br/>
         <div ng-show="form.$submitted || form.studentdescription.$touched">
             <div ng-show="form.studentdescription.$error.required"> Enter ID</div>
             
         </div> 
+	<br/>
         <input type="button" ng-click="reset(form)" value="Reset" />
         <input type="submit" ng-click="update(student)" value="Save" />
     </form>
